@@ -9,11 +9,11 @@ CFLAGS=-I$(IDIR) -std=c11
 LIBS=-lm
 
 # List all headers here
-_DEPS=suits.h
+_DEPS=suits.h splash.h card_deck.h
 DEPS=$(addprefix $(IDIR)/,$(_DEPS))
 
 # List all modules here
-_OBJ=main.o
+_OBJ=main.o card_deck.o
 OBJ=$(addprefix $(ODIR)/,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)
